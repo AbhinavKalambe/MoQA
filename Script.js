@@ -19,7 +19,55 @@ function renderStars(elId, count = 5) {
     }
 }
 
+const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  lucide.createIcons();
+
+  const slider = document.getElementById('toolboxSlider');
+  const cards = document.querySelectorAll('.toolbox-card');
+  const nextBtn = document.getElementById('toolboxNext');
+
+  let index = 0;
+  const cardWidth = cards[0].offsetWidth + 24; // card + gap
+  let autoSlide;
+
+  function goToCard(i) {
+    slider.scrollTo({
+      left: i * cardWidth,
+      behavior: 'smooth'
+    });
+  }
+
+  function nextCard() {
+    index = (index + 1) % cards.length;
+    goToCard(index);
+  }
+
+  function startAutoSlide() {
+    if (window.innerWidth < 768) {
+      autoSlide = setInterval(nextCard, 3000);
+    }
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    nextCard();
+    startAutoSlide();
+  });
+
+  slider.addEventListener('touchstart', stopAutoSlide);
+  slider.addEventListener('touchend', startAutoSlide);
+
+  startAutoSlide();
 
 
 /* ===============================

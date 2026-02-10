@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOQA | Playful Growth Engineering</title>
+     <link rel="icon" type="image/jpg" href="favicon.jpg" >
+    <title>MOQA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link
@@ -22,42 +23,51 @@
     <div class="bg-mesh"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-6 px-4">
-      <div
-        class="max-w-5xl mx-auto bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] px-8 py-4 flex justify-between items-center h-auto"
-      >
-        <div
-          class="brand text-2xl font-bold tracking-tighter flex items-center gap-2"
-        >
-          <div
-            class="w-8 h-8 bg-[#bef264] rounded-lg flex items-center justify-center text-black text-xl italic font-bold"
-          >
-            M
-          </div>
-          MOQA
-        </div>
-        <div
-          class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-white/50"
-        >
-          <a href="#services" class="hover:text-lime-400 transition-colors"
-            >Services</a
-          >
-          <a href="#proof" class="hover:text-lime-400 transition-colors"
-            >Proof</a
-          >
-          <a href="#playbook" class="hover:text-lime-400 transition-colors"
-            >Playbook</a
-          >
-          <a href="#faq" class="hover:text-lime-400 transition-colors">FAQ</a>
-          <a href="tel:9822441379">Call Us</a>
-        </div>
-        <a
-          href="#contact"
-          class="px-6 py-2.5 rounded-xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-lime-400 transition-colors duration-300 shadow-lg"
-          >Get callback</a
-        >
+   <nav class="fixed top-6 w-full z-50 px-4">
+  <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] px-6 py-4">
+    
+    <div class="flex justify-between items-center">
+      <!-- Brand -->
+      <div class="flex items-center gap-3 font-black text-2xl">
+        <img src="favicon.jpg" class="w-10 h-10 rounded-xl" alt="MOQA">
+        MOQA
       </div>
-    </nav>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.25em] text-white/60">
+        <a href="#services" class="hover:text-lime-400">Services</a>
+        <a href="#proof" class="hover:text-lime-400">Proof</a>
+        <a href="#playbook" class="hover:text-lime-400">Playbook</a>
+        <a href="#faq" class="hover:text-lime-400">FAQ</a>
+        <a href="tel:9822441379" class="hover:text-lime-400">Call</a>
+      </div>
+
+      <!-- Right CTA + Hamburger -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden sm:inline-block px-6 py-2 rounded-xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-lime-400">
+          Get Callback
+        </a>
+
+        <button id="menuBtn" class="md:hidden">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mt-6 bg-black/80 backdrop-blur-xl rounded-2xl p-6 space-y-4 text-[12px] font-black uppercase tracking-widest">
+      <a href="#services" class="block hover:text-lime-400">Services</a>
+      <a href="#proof" class="block hover:text-lime-400">Proof</a>
+      <a href="#playbook" class="block hover:text-lime-400">Playbook</a>
+      <a href="#faq" class="block hover:text-lime-400">FAQ</a>
+      <a href="tel:9822441379" class="block hover:text-lime-400">Call Us</a>
+      <a href="#contact" class="block bg-lime-400 text-black rounded-xl px-4 py-3 text-center">
+        Get Callback
+      </a>
+    </div>
+  </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-6 text-center">
@@ -431,74 +441,73 @@
     </section>
 
     <!-- Services Section -->
-    <section
-      id="services"
-      class="py-24 px-6 bg-black/20 border-t border-white/5 backdrop-blur-sm"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2
-            class="text-4xl md:text-7xl font-bold tracking-tighter mb-4 italic"
-          >
-            The Toolbox.
-          </h2>
-          <p
-            class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs"
-          >
-            Full-Stack Growth Engineering
-          </p>
-        </div>
-        <div
-          class="flex overflow-x-auto gap-6 pb-12 no-scrollbar snap-x snap-mandatory"
+<section
+  id="services"
+  class="py-24 px-6 bg-black/20 border-t border-white/5 backdrop-blur-sm"
+>
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Heading + Mobile Button -->
+    <div class="flex items-center justify-between mb-16">
+      <div class="text-center w-full md:w-auto md:text-left">
+        <h2 class="text-4xl md:text-7xl font-bold tracking-tighter mb-4 italic">
+          The Toolbox.
+        </h2>
+        <p
+          class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs"
         >
-          <div
-            class="bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] flex-1 snap-center hover:border-[#bef264]/20 transition-all"
-          >
-            <i data-lucide="search" class="text-blue-500 w-12 h-12 mb-8"></i>
-            <h4 class="font-bold text-xl mb-3 text-white">Google Ads</h4>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              High-ROI search dominance.
-            </p>
-          </div>
-          <div
-            class="bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] flex-1 snap-center hover:border-[#bef264]/20 transition-all"
-          >
-            <i data-lucide="instagram" class="text-pink-500 w-12 h-12 mb-8"></i>
-            <h4 class="font-bold text-xl mb-3 text-white">Social Ads</h4>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Viral growth strategies.
-            </p>
-          </div>
-          <div
-            class="bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] flex-1 snap-center hover:border-[#bef264]/20 transition-all"
-          >
-            <i data-lucide="code" class="text-cyan-500 w-12 h-12 mb-8"></i>
-            <h4 class="font-bold text-xl mb-3 text-white">Web Dev</h4>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Engineered for speed.
-            </p>
-          </div>
-          <div
-            class="bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] flex-1 snap-center hover:border-[#bef264]/20 transition-all"
-          >
-            <i data-lucide="zap" class="text-orange-500 w-12 h-12 mb-8"></i>
-            <h4 class="font-bold text-xl mb-3 text-white">SEO Systems</h4>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Authority builds.
-            </p>
-          </div>
-          <div
-            class="bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] flex-1 snap-center hover:border-[#bef264]/20 transition-all"
-          >
-            <i data-lucide="palette" class="text-[#bef264] w-12 h-12 mb-8"></i>
-            <h4 class="font-bold text-xl mb-3 text-white">Graphic Design</h4>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Thumb-stopping visual DNA.
-            </p>
-          </div>
-        </div>
+          Full-Stack Growth Engineering
+        </p>
       </div>
-    </section>
+
+      <!-- Mobile Next Button -->
+      <button
+        id="toolboxNext"
+        class="md:hidden w-12 h-12 rounded-full bg-[#bef264] text-black flex items-center justify-center shadow-xl active:scale-95 transition"
+      >
+        <i data-lucide="arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- Slider -->
+    <div
+      id="toolboxSlider"
+      class="flex overflow-x-auto gap-6 pb-12 no-scrollbar snap-x snap-mandatory scroll-smooth"
+    >
+      <!-- CARD -->
+      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+        <i data-lucide="search" class="text-blue-500 w-12 h-12 mb-8"></i>
+        <h4 class="font-bold text-xl mb-3 text-white">Google Ads</h4>
+        <p class="text-sm text-slate-400 leading-relaxed">High-ROI search dominance.</p>
+      </div>
+
+      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+        <i data-lucide="instagram" class="text-pink-500 w-12 h-12 mb-8"></i>
+        <h4 class="font-bold text-xl mb-3 text-white">Social Ads</h4>
+        <p class="text-sm text-slate-400 leading-relaxed">Viral growth strategies.</p>
+      </div>
+
+      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+        <i data-lucide="code" class="text-cyan-500 w-12 h-12 mb-8"></i>
+        <h4 class="font-bold text-xl mb-3 text-white">Web Dev</h4>
+        <p class="text-sm text-slate-400 leading-relaxed">Engineered for speed.</p>
+      </div>
+
+      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+        <i data-lucide="zap" class="text-orange-500 w-12 h-12 mb-8"></i>
+        <h4 class="font-bold text-xl mb-3 text-white">SEO Systems</h4>
+        <p class="text-sm text-slate-400 leading-relaxed">Authority builds.</p>
+      </div>
+
+      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+        <i data-lucide="palette" class="text-[#bef264] w-12 h-12 mb-8"></i>
+        <h4 class="font-bold text-xl mb-3 text-white">Graphic Design</h4>
+        <p class="text-sm text-slate-400 leading-relaxed">Thumb-stopping visual DNA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Playbook Section -->
     <section id="playbook" class="py-32 px-6">
