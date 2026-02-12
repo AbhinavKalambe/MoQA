@@ -1,900 +1,714 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="icon" type="image/jpg" href="favicon.jpg" >
-    <title>MOQA</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("vvr_HVtr0OMp6nbS7");
-    })();
-  </script>
-  <body class="antialiased">
-    <div class="bg-mesh"></div>
 
-    <!-- Navigation -->
-   <nav class="fixed top-6 w-full z-50 px-4">
-  <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] px-6 py-4">
-    
-    <div class="flex justify-between items-center">
-      <!-- Brand -->
-      <div class="flex items-center gap-3 font-black text-2xl">
-        <img src="favicon.jpg" class="w-10 h-10 rounded-xl" alt="MOQA">
-        MOQA
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <title>MOQA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("vvr_HVtr0OMp6nbS7");
+  })();
+</script>
+
+<body class="antialiased">
+  <div class="bg-mesh"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-6 w-full z-50 px-4">
+    <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] px-6 py-4">
+
+      <div class="flex justify-between items-center">
+        <!-- Brand -->
+        <div class="flex items-center gap-3 font-black text-2xl">
+          <img src="favicon.jpg" class="w-10 h-10 rounded-xl" alt="MOQA">
+          MOQA
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.25em] text-white/60">
+          <a href="#services" class="hover:text-lime-400">Services</a>
+          <a href="#proof" class="hover:text-lime-400">Proof</a>
+          <a href="#playbook" class="hover:text-lime-400">Playbook</a>
+          <a href="#faq" class="hover:text-lime-400">FAQ</a>
+          <a href="tel:9822441379" class="hover:text-lime-400">Call</a>
+        </div>
+
+        <!-- Right CTA + Hamburger -->
+        <div class="flex items-center gap-4">
+          <a href="#contact"
+            class="hidden sm:inline-block px-6 py-2 rounded-xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-lime-400">
+            Get Callback
+          </a>
+
+          <button id="menuBtn" class="md:hidden">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-[0.25em] text-white/60">
-        <a href="#services" class="hover:text-lime-400">Services</a>
-        <a href="#proof" class="hover:text-lime-400">Proof</a>
-        <a href="#playbook" class="hover:text-lime-400">Playbook</a>
-        <a href="#faq" class="hover:text-lime-400">FAQ</a>
-        <a href="tel:9822441379" class="hover:text-lime-400">Call</a>
-      </div>
-
-      <!-- Right CTA + Hamburger -->
-      <div class="flex items-center gap-4">
-        <a href="#contact" class="hidden sm:inline-block px-6 py-2 rounded-xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-lime-400">
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+        class="hidden md:hidden mt-6 bg-black/80 backdrop-blur-xl rounded-2xl p-6 space-y-4 text-[12px] font-black uppercase tracking-widest">
+        <a href="#services" class="block hover:text-lime-400">Services</a>
+        <a href="#proof" class="block hover:text-lime-400">Proof</a>
+        <a href="#playbook" class="block hover:text-lime-400">Playbook</a>
+        <a href="#faq" class="block hover:text-lime-400">FAQ</a>
+        <a href="tel:9822441379" class="block hover:text-lime-400">Call Us</a>
+        <a href="#contact" class="block bg-lime-400 text-black rounded-xl px-4 py-3 text-center">
           Get Callback
         </a>
-
-        <button id="menuBtn" class="md:hidden">
-          <i data-lucide="menu"></i>
-        </button>
       </div>
     </div>
+  </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden mt-6 bg-black/80 backdrop-blur-xl rounded-2xl p-6 space-y-4 text-[12px] font-black uppercase tracking-widest">
-      <a href="#services" class="block hover:text-lime-400">Services</a>
-      <a href="#proof" class="block hover:text-lime-400">Proof</a>
-      <a href="#playbook" class="block hover:text-lime-400">Playbook</a>
-      <a href="#faq" class="block hover:text-lime-400">FAQ</a>
-      <a href="tel:9822441379" class="block hover:text-lime-400">Call Us</a>
-      <a href="#contact" class="block bg-lime-400 text-black rounded-xl px-4 py-3 text-center">
-        Get Callback
-      </a>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 text-center">
+    <div class="max-w-5xl mx-auto">
+      <div
+        class="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[#bef264] text-[10px] font-black uppercase tracking-widest mb-6 floating backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bef264] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#bef264]"></span>
+        </span>
+        Pune's Most Explosive Growth Agency
+      </div>
+
+      <h1 class="text-5xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tighter">
+        Scale Revenue to <br />
+        <span class="text-[#bef264] italic text-glow">8-Figures.</span>
+      </h1>
+
+      <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-medium leading-relaxed">
+        MOQA engineers
+        <span class="text-white font-bold">end-to-end growth for Business </span>. From identity to
+        <span class="text-white font-bold underline decoration-[#bef264] decoration-2">guaranteed qualified
+          appointments</span>, we handle your entire growth engine from scratch.
+      </p>
+
+      <!-- Social Proof Sandwich -->
+      <div class="mb-12 flex flex-col items-center gap-6">
+        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+          <div class="flex text-amber-400 gap-0.5" id="hero-stars"></div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-white/70">4.9/5 Based on 300+ Clients</span>
+        </div>
+        <div
+          class="opacity-40 flex flex-wrap justify-center gap-10 grayscale hover:grayscale-0 transition-all duration-500 items-center text-[10px] font-black uppercase tracking-[0.3em] text-white">
+          <span>Startup India</span>
+          <span>Google Analytics Certified</span>
+          <span>Meta/ X blueprint </span>
+          <span>5-star LinkedInn</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-8">
+        <a href="#contact" class="btn-playful px-12 py-6 text-xl font-black text-center">Start My 90-Day Sprint</a>
+        <a href="#proof"
+          class="bento-card px-12 py-6 text-xl font-black border-white/10 hover:bg-white/10 h-auto flex items-center justify-center gap-3 backdrop-blur-sm">
+          View Success
+          <i data-lucide="arrow-right" class="text-[#bef264]"></i>
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
+  </section>
 
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 text-center">
-      <div class="max-w-5xl mx-auto">
-        <div
-          class="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 bg-white/5 text-[#bef264] text-[10px] font-black uppercase tracking-widest mb-6 floating backdrop-blur-sm"
-        >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#bef264] opacity-75"
-            ></span>
-            <span
-              class="relative inline-flex rounded-full h-2 w-2 bg-[#bef264]"
-            ></span>
-          </span>
-          Pune's Most Explosive Growth Agency
-        </div>
-
-        <h1
-          class="text-5xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tighter"
-        >
-          Scale Revenue to <br />
-          <span class="text-[#bef264] italic text-glow">8-Figures.</span>
-        </h1>
-
-        <p
-          class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-medium leading-relaxed"
-        >
-          MOQA engineers
-          <span class="text-white font-bold"
-            >end-to-end growth for Business </span
-          >. From identity to
-          <span
-            class="text-white font-bold underline decoration-[#bef264] decoration-2"
-            >guaranteed qualified appointments</span
-          >, we handle your entire growth engine from scratch.
-        </p>
-
-        <!-- Social Proof Sandwich -->
-        <div class="mb-12 flex flex-col items-center gap-6">
-          <div
-            class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10"
-          >
-            <div class="flex text-amber-400 gap-0.5" id="hero-stars"></div>
-            <span
-              class="text-[10px] font-bold uppercase tracking-widest text-white/70"
-              >4.9/5 Based on 300+ Clients</span
-            >
-          </div>
-          <div
-            class="opacity-40 flex flex-wrap justify-center gap-10 grayscale hover:grayscale-0 transition-all duration-500 items-center text-[10px] font-black uppercase tracking-[0.3em] text-white"
-          >
-            <span>Startup India</span>
-            <span>Google Analytics Certified</span>
-            <span>Meta/ X blueprint </span>
-            <span>5-star LinkedInn</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-center gap-8">
-          <a
-            href="#contact"
-            class="btn-playful px-12 py-6 text-xl font-black text-center"
-            >Start My 90-Day Sprint</a
-          >
-          <a
-            href="#proof"
-            class="bento-card px-12 py-6 text-xl font-black border-white/10 hover:bg-white/10 h-auto flex items-center justify-center gap-3 backdrop-blur-sm"
-          >
-            View Success
-            <i data-lucide="arrow-right" class="text-[#bef264]"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proof Section -->
-    <section
-      id="proof"
-      class="py-24 px-6 relative bg-black/20 border-y border-white/5 backdrop-blur-sm"
-    >
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6"
-        >
-          <div>
-            <p
-              class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs mb-4"
-            >
-              Real Outcomes
-            </p>
-            <h2 class="text-5xl md:text-7xl font-bold tracking-tighter italic">
-              Verified Proof.
-            </h2>
-          </div>
-          <div
-            class="bg-[#bef264]/10 border border-[#bef264]/20 p-6 rounded-2xl"
-          >
-            <div class="flex text-[#bef264] mb-2 gap-1" id="proof-stars"></div>
-            <p
-              class="text-[10px] font-black uppercase tracking-widest text-white"
-            >
-              4.9/5 Rating - 300+ Brands
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <!-- Testimonial Cards -->
-          <div
-            class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-lime-400/10 border-lime-400/20 hover:border-lime-400/40 text-[#bef264]"
-          >
-            <div class="flex items-center gap-4 text-white">
-              <div
-                class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-[#bef264] text-black"
-              >
-                RK
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Rahul Kapoor</h4>
-                <p
-                  class="text-[10px] uppercase font-black tracking-widest opacity-60"
-                >
-                  CEO, SolarEdge
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-200 text-lg italic leading-relaxed">
-              "MOQA filled our sales team's calendar with verified homeowners.
-              Hit our goal in 40 days."
-            </p>
-            <div
-              class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center"
-            >
-              <span class="font-black text-3xl">3.4x ROI</span>
-              <div
-                class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"
-              ></div>
-            </div>
-          </div>
-
-          <div
-            class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-pink-400/10 border-pink-400/20 hover:border-pink-400/40 text-[#f472b6]"
-          >
-            <div class="flex items-center gap-4 text-white">
-              <div
-                class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-[#f472b6] text-black"
-              >
-                SM
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Sanya Malhotra</h4>
-                <p
-                  class="text-[10px] uppercase font-black tracking-widest opacity-60"
-                >
-                  Founder, Bloom
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-200 text-lg italic leading-relaxed">
-              "Launching from scratch was terrifying. MOQA built our brand DNA
-              and engine in 3 weeks."
-            </p>
-            <div
-              class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center"
-            >
-              <span class="font-black text-3xl">₹1.2Cr+</span>
-              <div
-                class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"
-              ></div>
-            </div>
-          </div>
-
-          <div
-            class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-cyan-400/10 border-cyan-400/20 hover:border-cyan-400/40 text-cyan-400"
-          >
-            <div class="flex items-center gap-4 text-white">
-              <div
-                class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-cyan-400 text-black"
-              >
-                AV
-              </div>
-              <div>
-                <h4 class="font-bold text-lg">Ankit Verma</h4>
-                <p
-                  class="text-[10px] uppercase font-black tracking-widest opacity-60"
-                >
-                  MD, Verma Realty
-                </p>
-              </div>
-            </div>
-            <p class="text-slate-200 text-lg italic leading-relaxed">
-              "Stopped wasting time on tire-kickers. Focused purely on
-              high-intent investors."
-            </p>
-            <div
-              class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center"
-            >
-              <span class="font-black text-3xl">85% Quality</span>
-              <div
-                class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose MOQA -->
-    <section id="why" class="py-24 px-6 relative">
-      <div class="max-w-7xl mx-auto">
-        <div class="mb-20">
-          <h2
-            class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic text-left"
-          >
-            Why Choose MOQA?
+  <!-- Proof Section -->
+  <section id="proof" class="py-24 px-6 relative bg-black/20 border-y border-white/5 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <p class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs mb-4">
+            Real Outcomes
+          </p>
+          <h2 class="text-5xl md:text-7xl font-bold tracking-tighter italic">
+            Verified Proof.
           </h2>
-          <p
-            class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs text-left"
-          >
-            Built for the Maharashtra Startup Ecosystem
+        </div>
+        <div class="bg-[#bef264]/10 border border-[#bef264]/20 p-6 rounded-2xl">
+          <div class="flex text-[#bef264] mb-2 gap-1" id="proof-stars"></div>
+          <p class="text-[10px] font-black uppercase tracking-widest text-white">
+            4.9/5 Rating - 300+ Brands
           </p>
         </div>
+      </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6">
-          <div
-            class="md:col-span-2 md:row-span-2 bg-[#bef264] p-12 rounded-[2rem] text-black border-none flex flex-col justify-between group transition-transform hover:scale-[1.01] shadow-[0_0_50px_rgba(190,242,100,0.2)]"
-          >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <!-- Testimonial Cards -->
+        <div
+          class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-lime-400/10 border-lime-400/20 hover:border-lime-400/40 text-[#bef264]">
+          <div class="flex items-center gap-4 text-white">
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-[#bef264] text-black">
+              RK
+            </div>
             <div>
-              <i data-lucide="rocket"  class="w-16 h-16 mb-8">Abhinav</i>
-              <h1 class="text-2xl font-bold tracking-tighter leading-tight text-left"> We Specialize in : </h1>
-              <br
-                class="text-black/80 font-semibold text-lg leading-relaxed mb-10 text-left">
-               <b>Real Estate:</b>  Land Sales & Property Development. </br></br>
-               <b>Home Transformation:</b> Luxury Kitchen & Bathroom Remodeling.</br></br>
-               <b>Contractor Growth:</b>   Full-scale Renovation & Construction Leads.</br></br>
+              <h4 class="font-bold text-lg">Rahul Kapoor</h4>
+              <p class="text-[10px] uppercase font-black tracking-widest opacity-60">
+                CEO, SolarEdge
               </p>
             </div>
-           
           </div>
-
-          <!-- Interactive Dropdowns -->
-          <div
-            class="md:col-span-2 md:row-span-1 bento-card p-8 bg-black/40 backdrop-blur-sm text-left"
-          >
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-xl font-bold text-white">Strategic Operations</h3>
-              <i data-lucide="zap" class="text-[#bef264]"></i>
-            </div>
-            <details class="group">
-              <summary
-                class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none"
-              >
-                <span>The Roadmap</span>
-                <i
-                  data-lucide="plus"
-                  class="w-4 h-4 group-open:rotate-45 transition-transform"
-                ></i>
-              </summary>
-              <div class="pt-4 text-sm text-slate-300 leading-relaxed">
-                1. Discovery - We align with your brand goals and challenges to
-                build a foundation for growth.
-              </br>
-                2. Research - We analyze
-                competitors and market trends to secure your competitive
-                advantage.</br> 3. Strategy - We build a lean, result-driven roadmap
-                focused strictly on your business objectives.</br> 4. Execution - We
-                launch data-driven campaigns across all platforms to maximize
-                immediate impact. </br> 5. Optimization - We use real-time analytics
-                to refine performance and ensure peak efficiency. </br>6. Reporting -
-                We provide transparent KPI tracking to show exactly how your
-                goals are being met.
-              </div>
-            </details>
+          <p class="text-slate-200 text-lg italic leading-relaxed">
+            "MOQA filled our sales team's calendar with verified homeowners.
+            Hit our goal in 40 days."
+          </p>
+          <div class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center">
+            <span class="font-black text-3xl">3.4x ROI</span>
+            <div class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"></div>
           </div>
+        </div>
 
-          <div
-            class="md:col-span-1 md:row-span-2 bento-card p-8 bg-black/40 backdrop-blur-sm flex flex-col justify-end text-left border-pink-500/20"
-          >
-            <div class="text-[#f472b6] mb-6">
-              <i data-lucide="bolt" class="w-12 h-12"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4 text-white">100% Results</h3>
-            <details class="group">
-              <summary
-                class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none"
-              >
-                <span>Deep Dive</span>
-                <i
-                  data-lucide="plus"
-                  class="w-4 h-4 group-open:rotate-45 transition-transform"
-                ></i>
-              </summary>
-              <div class="pt-4 text-sm text-slate-300 leading-relaxed">
-              Zero Fluff. 100% Performance. Stop looking for a vendor and start building an empire. We are your Partners-in-Growth, taking the wheel from day zero to your first ₹10Cr. We handle the heavy lifting of strategy and execution so you can focus on the vision. Your success isn't just a goal—it’s our benchmark.
-                
-              </div>
-            </details>
-          </div>
-
-          <div
-            class="md:col-span-1 md:row-span-1 bento-card bg-black/40 backdrop-blur-sm p-8 flex flex-col justify-center text-left"
-          >
-            <h3 class="font-bold mb-2 text-white">Track Record</h3>
-            <p
-              class="text-[10px] text-slate-400 uppercase font-black tracking-widest mb-4 italic"
-            >
-              3+ Years Excellence
-            </p>
+        <div
+          class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-pink-400/10 border-pink-400/20 hover:border-pink-400/40 text-[#f472b6]">
+          <div class="flex items-center gap-4 text-white">
             <div
-              class="text-[#bef264] text-[10px] font-black uppercase flex items-center gap-2"
-            >
-            
-              <i data-lucide="shield-check" class="w-4 h-4"></i> 100% Verified
+              class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-[#f472b6] text-black">
+              SM
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Sanya Malhotra</h4>
+              <p class="text-[10px] uppercase font-black tracking-widest opacity-60">
+                Founder, Bloom
+              </p>
             </div>
           </div>
+          <p class="text-slate-200 text-lg italic leading-relaxed">
+            "Launching from scratch was terrifying. MOQA built our brand DNA
+            and engine in 3 weeks."
+          </p>
+          <div class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center">
+            <span class="font-black text-3xl">₹1.2Cr+</span>
+            <div class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"></div>
+          </div>
+        </div>
 
-          <div
-            class="md:col-span-2 md:row-span-1 bento-card p-8 bg-black/40 backdrop-blur-sm flex items-center justify-between text-left border-cyan-500/20"
-          >
-            <div>
-              <h3 class="text-xl font-bold text-white mb-2">Global Vision</h3>
-              <details class="group">
-                <summary
-                  class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none"
-                >
-                  <span>Expansion Insight</span>
-                  <i
-                    data-lucide="plus"
-                    class="w-4 h-4 group-open:rotate-45 transition-transform"
-                  ></i>
-                </summary>
-                <div class="pt-4 text-sm text-slate-300 leading-relaxed">
-                  local Maharashtra roots with a world-class reach.
-                  <p
-                    class="mt-2 text-white italic font-medium underline decoration-lime-400/30 decoration-2"
-                  >
-                    Market: Launched 20+ Pune-born SaaS products into North
-                    American markets.
-                  </p>
-                </div>
-              </details>
+        <div
+          class="bento-card p-10 flex flex-col gap-8 bg-gradient-to-br from-cyan-400/10 border-cyan-400/20 hover:border-cyan-400/40 text-cyan-400">
+          <div class="flex items-center gap-4 text-white">
+            <div
+              class="w-14 h-14 rounded-2xl flex items-center justify-center font-black text-xl bg-cyan-400 text-black">
+              AV
             </div>
-            <i data-lucide="globe" class="text-cyan-400 w-12 h-12 ml-4"></i>
+            <div>
+              <h4 class="font-bold text-lg">Ankit Verma</h4>
+              <p class="text-[10px] uppercase font-black tracking-widest opacity-60">
+                MD, Verma Realty
+              </p>
+            </div>
+          </div>
+          <p class="text-slate-200 text-lg italic leading-relaxed">
+            "Stopped wasting time on tire-kickers. Focused purely on
+            high-intent investors."
+          </p>
+          <div class="mt-auto pt-6 border-t border-white/5 flex justify-between items-center">
+            <span class="font-black text-3xl">85% Quality</span>
+            <div class="w-2 h-2 rounded-full bg-current shadow-[0_0_15px_currentColor]"></div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-<section
-  id="services"
-  class="py-5 px-6 bg-black/20 border-t border-white/5 backdrop-blur-sm"
->
-  <div class="max-w-7xl mx-auto">
-
-    <!-- Heading + Mobile Button -->
-    <div class="flex items-center justify-between mb-16">
-      <div class="text-center w-full md:w-auto md:text-left">
-        <h2 class="text-4xl md:text-7xl font-bold tracking-tighter mb-4 italic">
-          The Toolbox.
+  <!-- Why Choose MOQA -->
+  <section id="why" class="py-24 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-20">
+        <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic text-left">
+          Why Choose MOQA?
         </h2>
-        <p
-          class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs"
-        >
-          Full-Stack Growth Engineering
+        <p class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs text-left">
+          Built for the Maharashtra Startup Ecosystem
         </p>
       </div>
 
-      <!-- Mobile Next Button -->
-      <button
-        id="toolboxNext"
-        class="md:hidden w-12 h-12 rounded-full bg-[#bef264] text-black flex items-center justify-center shadow-xl active:scale-95 transition"
-      >
-        <i data-lucide="arrow-right"></i>
-      </button>
+      <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6">
+        <div
+          class="md:col-span-2 md:row-span-2 bg-[#bef264] p-12 rounded-[2rem] text-black border-none flex flex-col justify-between group transition-transform hover:scale-[1.01] shadow-[0_0_50px_rgba(190,242,100,0.2)]">
+          <div>
+            <i data-lucide="rocket" class="w-16 h-16 mb-8">Abhinav</i>
+            <h1 class="text-2xl font-bold tracking-tighter leading-tight text-left"> We Specialize in : </h1>
+            <br class="text-black/80 font-semibold text-lg leading-relaxed mb-10 text-left">
+            <b>Real Estate:</b> Land Sales & Property Development. </br></br>
+            <b>Home Transformation:</b> Luxury Kitchen & Bathroom Remodeling.</br></br>
+            <b>Contractor Growth:</b> Full-scale Renovation & Construction Leads.</br></br>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Interactive Dropdowns -->
+        <div class="md:col-span-2 md:row-span-1 bento-card p-8 bg-black/40 backdrop-blur-sm text-left">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-bold text-white">Strategic Operations</h3>
+            <i data-lucide="zap" class="text-[#bef264]"></i>
+          </div>
+          <details class="group">
+            <summary
+              class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none">
+              <span>The Roadmap</span>
+              <i data-lucide="plus" class="w-4 h-4 group-open:rotate-45 transition-transform"></i>
+            </summary>
+            <div class="pt-4 text-sm text-slate-300 leading-relaxed">
+              1. Discovery - We align with your brand goals and challenges to
+              build a foundation for growth.
+              </br>
+              2. Research - We analyze
+              competitors and market trends to secure your competitive
+              advantage.</br> 3. Strategy - We build a lean, result-driven roadmap
+              focused strictly on your business objectives.</br> 4. Execution - We
+              launch data-driven campaigns across all platforms to maximize
+              immediate impact. </br> 5. Optimization - We use real-time analytics
+              to refine performance and ensure peak efficiency. </br>6. Reporting -
+              We provide transparent KPI tracking to show exactly how your
+              goals are being met.
+            </div>
+          </details>
+        </div>
+
+        <div
+          class="md:col-span-1 md:row-span-2 bento-card p-8 bg-black/40 backdrop-blur-sm flex flex-col justify-end text-left border-pink-500/20">
+          <div class="text-[#f472b6] mb-6">
+            <i data-lucide="bolt" class="w-12 h-12"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-white">100% Results</h3>
+          <details class="group">
+            <summary
+              class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none">
+              <span>Deep Dive</span>
+              <i data-lucide="plus" class="w-4 h-4 group-open:rotate-45 transition-transform"></i>
+            </summary>
+            <div class="pt-4 text-sm text-slate-300 leading-relaxed">
+              Zero Fluff. 100% Performance. Stop looking for a vendor and start building an empire. We are your
+              Partners-in-Growth, taking the wheel from day zero to your first ₹10Cr. We handle the heavy lifting of
+              strategy and execution so you can focus on the vision. Your success isn't just a goal—it’s our benchmark.
+
+            </div>
+          </details>
+        </div>
+
+        <div
+          class="md:col-span-1 md:row-span-1 bento-card bg-black/40 backdrop-blur-sm p-8 flex flex-col justify-center text-left">
+          <h3 class="font-bold mb-2 text-white">Track Record</h3>
+          <p class="text-[10px] text-slate-400 uppercase font-black tracking-widest mb-4 italic">
+            3+ Years Excellence
+          </p>
+          <div class="text-[#bef264] text-[10px] font-black uppercase flex items-center gap-2">
+
+            <i data-lucide="shield-check" class="w-4 h-4"></i> 100% Verified
+          </div>
+        </div>
+
+        <div
+          class="md:col-span-2 md:row-span-1 bento-card p-8 bg-black/40 backdrop-blur-sm flex items-center justify-between text-left border-cyan-500/20">
+          <div>
+            <h3 class="text-xl font-bold text-white mb-2">Global Vision</h3>
+            <details class="group">
+              <summary
+                class="cursor-pointer text-[10px] font-black uppercase tracking-widest text-[#bef264] flex items-center justify-between outline-none">
+                <span>Expansion Insight</span>
+                <i data-lucide="plus" class="w-4 h-4 group-open:rotate-45 transition-transform"></i>
+              </summary>
+              <div class="pt-4 text-sm text-slate-300 leading-relaxed">
+                local Maharashtra roots with a world-class reach.
+                <p class="mt-2 text-white italic font-medium underline decoration-lime-400/30 decoration-2">
+                  Market: Launched 20+ Pune-born SaaS products into North
+                  American markets.
+                </p>
+              </div>
+            </details>
+          </div>
+          <i data-lucide="globe" class="text-cyan-400 w-12 h-12 ml-4"></i>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Slider -->
-    <div
-      id="toolboxSlider"
-      class="flex overflow-x-auto gap-6 pb-12 no-scrollbar snap-x snap-mandatory scroll-smooth"
-    >
-      <!-- CARD -->
-      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
-        <i data-lucide="search" class="text-blue-500 w-12 h-12 mb-8"></i>
-        <h4 class="font-bold text-xl mb-3 text-white">Google Ads</h4>
-        <p class="text-sm text-slate-400 leading-relaxed">High-ROI search dominance.</p>
-      </div>
+  <!-- Services Section -->
+  <section id="services" class="py-5 px-6 bg-black/20 border-t border-white/5 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto">
 
-      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
-        <i data-lucide="instagram" class="text-pink-500 w-12 h-12 mb-8"></i>
-        <h4 class="font-bold text-xl mb-3 text-white">Social Ads</h4>
-        <p class="text-sm text-slate-400 leading-relaxed">Viral growth strategies.</p>
-      </div>
-
-      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
-        <i data-lucide="code" class="text-cyan-500 w-12 h-12 mb-8"></i>
-        <h4 class="font-bold text-xl mb-3 text-white">Web Dev</h4>
-        <p class="text-sm text-slate-400 leading-relaxed">Engineered for speed.</p>
-      </div>
-
-      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
-        <i data-lucide="zap" class="text-orange-500 w-12 h-12 mb-8"></i>
-        <h4 class="font-bold text-xl mb-3 text-white">SEO Systems</h4>
-        <p class="text-sm text-slate-400 leading-relaxed">Authority builds.</p>
-      </div>
-
-      <div class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
-        <i data-lucide="palette" class="text-[#bef264] w-12 h-12 mb-8"></i>
-        <h4 class="font-bold text-xl mb-3 text-white">Graphic Design</h4>
-        <p class="text-sm text-slate-400 leading-relaxed">Thumb-stopping visual DNA.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Playbook Section -->
-    <section id="playbook" class="py-5 px-6">
-      <div class="max-w-7xl mx-auto text-left">
-        <div class="text-center mb-20">
-          <h2
-            class="text-5xl md:text-8xl font-bold tracking-tighter mb-6 italic"
-          >
-            The Playbook.
+      <!-- Heading + Mobile Button -->
+      <div class="flex items-center justify-between mb-16">
+        <div class="text-center w-full md:w-auto md:text-left">
+          <h2 class="text-4xl md:text-7xl font-bold tracking-tighter mb-4 italic">
+            The Toolbox.
           </h2>
-          <p
-            class="text-[#bef264] font-black uppercase tracking-[0.2em] text-xs"
-          >
-            Proprietary Growth Architecture
+          <p class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs">
+            Full-Stack Growth Engineering
           </p>
         </div>
 
-        <div class="mb-12">
+        <!-- Mobile Next Button -->
+        <button id="toolboxNext"
+          class="md:hidden w-12 h-12 rounded-full bg-[#bef264] text-black flex items-center justify-center shadow-xl active:scale-95 transition">
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Slider -->
+      <div id="toolboxSlider" class="flex overflow-x-auto gap-6 pb-12 no-scrollbar snap-x snap-mandatory scroll-smooth">
+        <!-- CARD -->
+        <div
+          class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+          <i data-lucide="search" class="text-blue-500 w-12 h-12 mb-8"></i>
+          <h4 class="font-bold text-xl mb-3 text-white">Google Ads</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">High-ROI search dominance.</p>
+        </div>
+
+        <div
+          class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+          <i data-lucide="instagram" class="text-pink-500 w-12 h-12 mb-8"></i>
+          <h4 class="font-bold text-xl mb-3 text-white">Social Ads</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Viral growth strategies.</p>
+        </div>
+
+        <div
+          class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+          <i data-lucide="code" class="text-cyan-500 w-12 h-12 mb-8"></i>
+          <h4 class="font-bold text-xl mb-3 text-white">Web Dev</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Engineered for speed.</p>
+        </div>
+
+        <div
+          class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+          <i data-lucide="zap" class="text-orange-500 w-12 h-12 mb-8"></i>
+          <h4 class="font-bold text-xl mb-3 text-white">SEO Systems</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Authority builds.</p>
+        </div>
+
+        <div
+          class="toolbox-card bg-black/40 backdrop-blur-sm border border-white/5 rounded-[2rem] p-10 flex flex-col items-center text-center min-w-[300px] md:min-w-[240px] snap-center hover:border-[#bef264]/20 transition-all">
+          <i data-lucide="palette" class="text-[#bef264] w-12 h-12 mb-8"></i>
+          <h4 class="font-bold text-xl mb-3 text-white">Graphic Design</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">Thumb-stopping visual DNA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Playbook Section -->
+  <section id="playbook" class="py-5 px-6">
+    <div class="max-w-7xl mx-auto text-left">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-8xl font-bold tracking-tighter mb-6 italic">
+          The Playbook.
+        </h2>
+        <p class="text-[#bef264] font-black uppercase tracking-[0.2em] text-xs">
+          Proprietary Growth Architecture
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <div
+          class="bg-black/40 border border-[#bef264]/20 rounded-[2.5rem] p-3 group relative overflow-hidden aspect-video md:aspect-[21/9] h-auto shadow-2xl backdrop-blur-sm">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
           <div
-            class="bg-black/40 border border-[#bef264]/20 rounded-[2.5rem] p-3 group relative overflow-hidden aspect-video md:aspect-[21/9] h-auto shadow-2xl backdrop-blur-sm"
-          >
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"
-            ></div>
-            <div
-              class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 group-hover:scale-105 transition duration-1000"
-            ></div>
-            <div
-              class="relative z-20 h-full flex flex-col justify-end p-8 md:p-16"
-            >
-              <div class="flex items-center gap-8">
-                <button
-                  class="w-16 h-16 md:w-28 md:h-28 bg-[#bef264] rounded-[2rem] flex items-center justify-center text-black text-2xl md:text-4xl shadow-2xl hover:scale-110 transition duration-300"
-                >
-                  <i data-lucide="play" fill="Method."></i>
-                </button>
-                <div>
-                  <h3 class="text-2xl md:text-6xl font-bold mb-2">
-                    The MOQA Method.
-                  </h3>
-                  <p class="text-white text-sm md:text-xl font-bold opacity-60">
-                    A technical breakdown of our 8-figure scaling engine.
-                  </p>
-                </div>
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 group-hover:scale-105 transition duration-1000">
+          </div>
+          <div class="relative z-20 h-full flex flex-col justify-end p-8 md:p-16">
+            <div class="flex items-center gap-8">
+              <button
+                class="w-16 h-16 md:w-28 md:h-28 bg-[#bef264] rounded-[2rem] flex items-center justify-center text-black text-2xl md:text-4xl shadow-2xl hover:scale-110 transition duration-300">
+                <i data-lucide="play" fill="Method."></i>
+              </button>
+              <div>
+                <h3 class="text-2xl md:text-6xl font-bold mb-2">
+                  The MOQA Method.
+                </h3>
+                <p class="text-white text-sm md:text-xl font-bold opacity-60">
+                  A technical breakdown of our 8-figure scaling engine.
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
       <section class="py-20">
-  <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6">
 
-    <div class="grid gap-6 
+          <div class="grid gap-6 
                 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
 
-      <!-- Card 1 -->
-      <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
-        <div class="p-6 bg-black/40 rounded-2xl">
-<h2 class="text-3xl font-bold text-[#bef264]">
-  92%
-</h2>
+            <!-- Card 1 -->
+            <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
+              <div class="p-6 bg-black/40 rounded-2xl">
+                <h2 class="text-3xl font-bold text-[#bef264]">
+                  92%
+                </h2>
 
-  
-</div>
 
-        <h3 class="text-2xl font-bold mb-4">Verified Intent</h3>
+              </div>
 
-        <p class="text-slate-400 text-sm leading-relaxed">
-           (Every lead is phone-verified)
-        </p>
+              <h3 class="text-2xl font-bold mb-4">Verified Intent</h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed">
+                (Every lead is phone-verified)
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
+              <div class="p-6 bg-black/40 rounded-2xl">
+                <h2 class="text-3xl font-bold text-orange-400">
+                  4.2x
+                </h2>
+
+
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Average ROAS</h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed">
+                (Revenue vs. Ad Spend)
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
+              <div class="p-6 bg-black/40 rounded-2xl">
+                <h2 class="text-3xl font-bold text-purple-400">
+                  &lt; 24 Hours
+                </h2>
+
+
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Lead Delivery </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed">
+                (Real-time sync to your CRM)
+              </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
+              <div class="p-6 bg-black/40 rounded-2xl">
+                <h2 class="text-3xl font-bold text-yellow-400">
+                  ₹0.00
+                </h2>
+
+
+
+              </div>
+
+              <h3 class="text-2xl font-bold mb-4">Waste Policy </h3>
+
+              <p class="text-slate-400 text-sm leading-relaxed">
+                (You dont pay for Junk)
+              </p>
+            </div>
+
+
+          </div>
+      </section>
+
+
+      <!-- FAQ Section -->
+      <section id="faq" class="py-16 px-6 bg-black/20 border-y border-white/5 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2
+              class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic text-[#bef264] drop-shadow-[0_0_15px_rgba(190,242,100,0.4)]">
+              Direct Answers.
+            </h2>
+            <p class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs">
+              Full Transparency
+            </p>
+          </div>
+
+          <div class="space-y-6 text-left">
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">What makes MOQA different from other marketing
+                  agencies?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                MOQA is NOT a basic lead-generation agency. We implement custom
+                AI-powered growth infrastructures with automated qualification and
+                booking. Our system runs 24/7, filtering out tire kickers before
+                they ever reach you.
+              </div>
+            </details>
+
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">How do you measure success?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                We track metrics that drive revenue: ROI, conversion rates, and
+                customer acquisition costs. You receive transparent reporting that
+                connects marketing spend directly to business growth.
+              </div>
+            </details>
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">How do you reach the right audience?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                We combine data analytics with consumer psychology. Through
+                multi-channel targeting and continuous A/B testing, we ensure your
+                message reaches high-intent prospects on the platforms they use
+                most.
+              </div>
+            </details>
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">What industries do you specialize in?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                We are industry-agnostic. By working across diverse sectors—from
+                tech and retail to professional services—we apply cross-industry
+                insights that help your brand stand out in crowded markets.
+              </div>
+            </details>
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">How quickly can we expect results?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                Most clients see increased engagement and traffic within 14–30
+                days. Our strategies are built to compound, with full performance
+                optimization typically reached by the 90-day mark.
+              </div>
+            </details>
+            <details class="group bento-card bg-black/40 border-white/10 overflow-hidden">
+              <summary class="p-8 cursor-pointer flex justify-between items-center list-none outline-none">
+                <span class="text-xl font-bold text-white">What is your pricing structure?</span>
+                <div
+                  class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all">
+                  <i data-lucide="chevron-down"
+                    class="text-white group-open:text-black group-open:rotate-180 transition-transform"></i>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
+                We offer flexible, tiered pricing based on your specific needs,
+                ranging from project-based work to ongoing monthly partnerships.
+                Custom quotes are provided after a brief discovery call.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+          <div id="contact-container"
+            class="bg-[#bef264] rounded-[2.5rem] p-10 md:p-20 text-black shadow-[0_0_100px_rgba(190,242,100,0.3)] text-left border-none relative overflow-hidden">
+            <h2 class="text-6xl md:text-8xl font-bold mb-10 tracking-tighter italic leading-none text-zinc-950">
+              Ready to <br /><span class="text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">Level Up?</span>
+            </h2>
+            <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+              <input type="text" name="user_name" placeholder="Your Name" required class="form-input" />
+              <input type="email" name="user_email" placeholder="Work Email" required class="form-input" />
+              <input type="tel" name="user_phone" placeholder="Phone Number" required class="form-input" />
+              <input type="text" name="startup_name" placeholder="Business Name" required class="form-input" />
+              <textarea name="message" placeholder="What are your goals for this sprint?" required
+                class="md:col-span-2 form-input h-32 resize-none"></textarea>
+
+              <button type="submit"
+                class="md:col-span-2 bg-black text-[#bef264] py-8 rounded-3xl font-black text-2xl hover:scale-[1.02] transition duration-500 uppercase tracking-widest shadow-2xl">
+                Launch Project Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+     <footer class="bg-[#0c0d12] border-t border-white/5 px-6 py-16 sm:py-20">
+  <div class="max-w-7xl mx-auto flex flex-col gap-12 md:flex-row md:justify-between md:items-start text-center md:text-left">
+
+    <!-- Brand Section -->
+    <div class="flex flex-col items-center md:items-start">
+      <div class="flex items-center gap-3 mb-4">
+        <div
+          class="w-10 h-10 bg-[#bef264] rounded-xl flex items-center justify-center text-black text-xl italic font-bold">
+          M
+        </div>
+        <span class="text-3xl font-bold text-white">MOQA</span>
       </div>
- <!-- Card 2 -->
-      <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
-        <div class="p-6 bg-black/40 rounded-2xl">
-<h2 class="text-3xl font-bold text-orange-400">
-  4.2x
-</h2>
 
-  
-</div>
+      <p class="text-slate-400 text-sm max-w-xs font-semibold opacity-70 leading-relaxed">
+        High-Output Growth for the Next Gen. Pune Pride.
+      </p>
+    </div>
 
-        <h3 class="text-2xl font-bold mb-4">Average ROAS</h3>
+    <!-- Links Section -->
+    <div class="flex flex-col sm:flex-row gap-12 text-xs font-black uppercase tracking-widest opacity-60">
 
-        <p class="text-slate-400 text-sm leading-relaxed">
-          (Revenue vs. Ad Spend)
-        </p>
+      <!-- Social -->
+      <div class="flex flex-col gap-4 items-center md:items-start">
+        <a href="https://www.linkedin.com/company/moqa-official/"
+          class="text-white hover:text-[#bef264] transition-colors py-2">
+          LinkedIn
+        </a>
+
+        <a href="https://www.instagram.com/moqa.official_"
+          class="text-white hover:text-[#bef264] transition-colors py-2">
+          Instagram
+        </a>
       </div>
-       <!-- Card 3 -->
-      <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
-        <div class="p-6 bg-black/40 rounded-2xl">
-<h2 class="text-3xl font-bold text-purple-400">
-  &lt; 24 Hours
-</h2>
 
-  
-</div>
+      <!-- Contact -->
+      <div class="flex flex-col gap-4 items-center md:items-start">
+        <a href="mailto:response.moqa@gmail.com"
+          class="text-white hover:text-[#bef264] transition-colors py-2 break-all">
+          response.moqa@gmail.com
+        </a>
 
-        <h3 class="text-2xl font-bold mb-4">Lead Delivery </h3>
-
-        <p class="text-slate-400 text-sm leading-relaxed">
-           (Real-time sync to your CRM)
-        </p>
+        <a href="tel:9822441379"
+          class="text-white hover:text-[#bef264] transition-colors py-2">
+          9822441379
+        </a>
       </div>
-       <!-- Card 4 -->
-      <div class="bento-card group p-6 flex flex-col bg-black/40 rounded-2xl">
-        <div class="p-6 bg-black/40 rounded-2xl">
-<h2 class="text-3xl font-bold text-yellow-400">
-  ₹0.00
-</h2>
 
-
-  
-</div>
-
-        <h3 class="text-2xl font-bold mb-4">Waste Policy </h3>
-
-        <p class="text-slate-400 text-sm leading-relaxed">
-           (You dont pay for Junk)
-        </p>
-      </div>
-       
-
+    </div>
   </div>
-</section>
+
+  <!-- Bottom Line -->
+  <div
+    class="mt-16 text-center text-[11px] font-bold tracking-widest opacity-30 uppercase text-white">
+    © 2026 MOQA | a2 ENGINEERED.
+  </div>
+</footer>
 
 
-    <!-- FAQ Section -->
-    <section
-      id="faq"
-      class="py-16 px-6 bg-black/20 border-y border-white/5 backdrop-blur-sm"
-    >
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-16">
-          <h2
-            class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic text-[#bef264] drop-shadow-[0_0_15px_rgba(190,242,100,0.4)]"
-          >
-            Direct Answers.
-          </h2>
-          <p
-            class="text-[#bef264] font-black uppercase tracking-[0.3em] text-xs"
-          >
-            Full Transparency
-          </p>
-        </div>
+      <script src="Script.js"></script>
+</body>
 
-        <div class="space-y-6 text-left">
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >What makes MOQA different from other marketing agencies?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              MOQA is NOT a basic lead-generation agency. We implement custom
-              AI-powered growth infrastructures with automated qualification and
-              booking. Our system runs 24/7, filtering out tire kickers before
-              they ever reach you.
-            </div>
-          </details>
-
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >How do you measure success?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              We track metrics that drive revenue: ROI, conversion rates, and
-              customer acquisition costs. You receive transparent reporting that
-              connects marketing spend directly to business growth.
-            </div>
-          </details>
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >How do you reach the right audience?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              We combine data analytics with consumer psychology. Through
-              multi-channel targeting and continuous A/B testing, we ensure your
-              message reaches high-intent prospects on the platforms they use
-              most.
-            </div>
-          </details>
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >What industries do you specialize in?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              We are industry-agnostic. By working across diverse sectors—from
-              tech and retail to professional services—we apply cross-industry
-              insights that help your brand stand out in crowded markets.
-            </div>
-          </details>
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >How quickly can we expect results?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              Most clients see increased engagement and traffic within 14–30
-              days. Our strategies are built to compound, with full performance
-              optimization typically reached by the 90-day mark.
-            </div>
-          </details>
-          <details
-            class="group bento-card bg-black/40 border-white/10 overflow-hidden"
-          >
-            <summary
-              class="p-8 cursor-pointer flex justify-between items-center list-none outline-none"
-            >
-              <span class="text-xl font-bold text-white"
-                >What is your pricing structure?</span
-              >
-              <div
-                class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-open:bg-[#bef264] transition-all"
-              >
-                <i
-                  data-lucide="chevron-down"
-                  class="text-white group-open:text-black group-open:rotate-180 transition-transform"
-                ></i>
-              </div>
-            </summary>
-            <div class="px-8 pb-8 text-slate-300 text-lg leading-relaxed">
-              We offer flexible, tiered pricing based on your specific needs,
-              ranging from project-based work to ongoing monthly partnerships.
-              Custom quotes are provided after a brief discovery call.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6">
-      <div class="max-w-4xl mx-auto">
-        <div
-          id="contact-container"
-          class="bg-[#bef264] rounded-[2.5rem] p-10 md:p-20 text-black shadow-[0_0_100px_rgba(190,242,100,0.3)] text-left border-none relative overflow-hidden"
-        >
-          <h2
-            class="text-6xl md:text-8xl font-bold mb-10 tracking-tighter italic leading-none text-zinc-950"
-          >
-            Ready to <br /><span
-              class="text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)]"
-              >Level Up?</span
-            >
-          </h2>
-          <form
-            id="contact-form"
-            class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10"
-          >
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Your Name"
-              required
-              class="form-input"
-            />
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Work Email"
-              required
-              class="form-input"
-            />
-            <input
-              type="tel"
-              name="user_phone"
-              placeholder="Phone Number"
-              required
-              class="form-input"
-            />
-            <input
-              type="text"
-              name="startup_name"
-              placeholder="Business Name"
-              required
-              class="form-input"
-            />
-            <textarea
-              name="message"
-              placeholder="What are your goals for this sprint?"
-              required
-              class="md:col-span-2 form-input h-32 resize-none"
-            ></textarea>
-
-            <button
-              type="submit"
-              class="md:col-span-2 bg-black text-[#bef264] py-8 rounded-3xl font-black text-2xl hover:scale-[1.02] transition duration-500 uppercase tracking-widest shadow-2xl"
-            >
-              Launch Project Now
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-20 px-6 border-t border-white/5 bg-[#0c0d12]">
-      <div
-        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-left"
-      >
-        <div>
-          <div
-            class="brand text-4xl font-bold mb-4 flex items-center gap-3 text-white"
-          >
-            <div
-              class="w-10 h-10 bg-[#bef264] rounded-xl flex items-center justify-center text-black text-2xl italic font-bold"
-            >
-              M
-            </div>
-            MOQA
-          </div>
-          <p class="text-slate-400 max-w-xs text-sm font-bold opacity-60">
-            High-Output Growth for the Next Gen. Pune Pride. Powered by Osumare.
-          </p>
-        </div>
-        <div
-          class="flex gap-16 text-[10px] font-black uppercase tracking-[0.4em] opacity-40"
-        >
-          <div class="flex flex-col gap-6">
-            <a
-              href="https://www.linkedin.com/company/moqa-official/"
-              class="hover:text-[#bef264] transition-colors text-white"
-              >LinkedIn</a
-            >
-            <a
-              href="https://www.instagram.com/moqa.official_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="hover:text-[#bef264] transition-colors text-white">Instagram</a>
-          </div>
-          <div class="flex flex-col gap-6 text-white">
-            <a href="#" class="hover:text-[#bef264] transition-colors"
-              >response.moqa@gmail.com</a
-            >
-            <a href="#" class="hover:text-[#bef264] transition-colors">9822441379</a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="text-center mt-20 text-[10px] font-black opacity-20 uppercase tracking-[0.6em] text-white"
-      >
-        © 2026 MOQA | a2 ENGINEERED.
-      </div>
-    </footer>
-
-    <script src="Script.js"></script>
-  </body>
 </html>
